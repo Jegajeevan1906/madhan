@@ -65,12 +65,12 @@ export function Blog() {
                   <h3 className="text-3xl font-extrabold font-display tracking-tight leading-tight">Anita Kumari</h3>
                   <p className="text-base text-gold tracking-widest uppercase mt-2 font-semibold">Managing Director</p>
                   <a
-                    href="https://seeni-infra-pvt-ltd.vercel.app/"
+                    href="https://india5000.com/winners/2025/india-5000-best-msme-awards-2025/atechssystem-integrator-pvt-ltd-1753769740126"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-gold transition-colors mt-2.5 font-medium underline underline-offset-4 decoration-gold/40 hover:decoration-gold"
+                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-gold transition-colors mt-2.5 font-medium underline underline-offset-4 decoration-gold/40 hover:decoration-gold max-w-full break-all"
                   >
-                    https://seeni-infra-pvt-ltd.vercel.app/ <ExternalLink className="h-3 w-3 shrink-0" />
+                    India 5000 Best MSME Awards 2025 Winner <ExternalLink className="h-3 w-3 shrink-0" />
                   </a>
                 </div>
                 <div className="flex gap-3">
@@ -118,8 +118,8 @@ export function Blog() {
                 <p>
                   A passionate advocate for "Make in India," Anita is driving the vision to reduce dependence on imports and contribute significantly to India's industrial growth. Anita Kumari continues to inspire a new generation of entrepreneurs, especially women in technology and construction, by proving that with the right vision and relentless dedication, it is possible to build something impactful and lasting.
                   <span className="block mt-4">
-                    <a href="https://seeni-infra-pvt-ltd.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-gold hover:text-gold/80 transition-colors font-medium text-sm underline underline-offset-4 decoration-gold/40 hover:decoration-gold">
-                      Explore ongoing corporate initiatives & awards &rarr;
+                    <a href="https://india5000.com/winners/2025/india-5000-best-msme-awards-2025/atechssystem-integrator-pvt-ltd-1753769740126" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-gold hover:text-gold/80 transition-colors font-medium text-sm underline underline-offset-4 decoration-gold/40 hover:decoration-gold">
+                      Explore India 5000 Best MSME Awards 2025 Winner Listing &rarr;
                     </a>
                   </span>
                 </p>

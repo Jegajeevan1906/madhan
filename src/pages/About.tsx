@@ -126,8 +126,8 @@ export function About() {
                 <p className="mt-8 text-base leading-relaxed text-muted-foreground">
                   With a visionary approach to modern infrastructure and a passion for the "Make in India" initiative, Anita Kumari established SEENI INFRA PVT LTD to redefine standards in the construction landscape. Her leadership has instilled a culture of precision, accountability, and quality (QCD) across all commercial, residential, and industrial sectors.
                   <span className="block mt-4">
-                    <a href="https://seeni-infra-pvt-ltd.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-gold hover:text-gold/80 transition-colors font-medium text-sm underline underline-offset-4 decoration-gold/40 hover:decoration-gold">
-                      Read full executive biography & leadership vision &rarr;
+                    <a href="https://india5000.com/winners/2025/india-5000-best-msme-awards-2025/atechssystem-integrator-pvt-ltd-1753769740126" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-gold hover:text-gold/80 transition-colors font-medium text-sm underline underline-offset-4 decoration-gold/40 hover:decoration-gold">
+                      Read full executive biography & India 5000 Award listing &rarr;
                     </a>
                   </span>
                 </p>
