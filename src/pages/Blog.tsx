@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import { Mail, Quote, ExternalLink } from "lucide-react"
+import { Mail, Quote } from "lucide-react"
 import { Linkedin } from "../components/Icons"
 import { PageHero } from "../components/PageHero"
 import { BLOG_DAY, BLOG_NIGHT } from "../lib/images"

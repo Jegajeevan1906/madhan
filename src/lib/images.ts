@@ -34,7 +34,31 @@ export const PROJECT_1 = "/assets/project-1.jpg"
 export const PROJECT_2 = "/assets/project-2.jpg"
 export const PROJECT_3 = "/assets/project-3.jpg"
 
+// ── Infrastructure & Civil Gallery ────────────────────────────────────────────
+export const INFRA_1 = "/assets/infrastructure/infra-1.jpg"
+export const INFRA_2 = "/assets/infrastructure/infra-2.jpg"
+export const INFRA_3 = "/assets/infrastructure/infra-3.jpg"
+export const INFRA_4 = "/assets/infrastructure/infra-4.jpg"
+
+// ── EPC & Turnkey Contracts Gallery ───────────────────────────────────────────
+export const TURNKEY_1 = "/assets/turnkey/turnkey-1.jpg"
+export const TURNKEY_2 = "/assets/turnkey/turnkey-2.jpg"
+export const TURNKEY_3 = "/assets/turnkey/turnkey-3.jpg"
+export const TURNKEY_4 = "/assets/turnkey/turnkey-4.jpg"
+// ── Industrial & Commercial Gallery ───────────────────────────────────────────
+export const INDUSTRIAL_1 = "/assets/industrial/industrial-1.jpg"
+export const INDUSTRIAL_2 = "/assets/industrial/industrial-2.jpg"
+export const INDUSTRIAL_3 = "/assets/industrial/industrial-3.jpg"
+export const INDUSTRIAL_4 = "/assets/industrial/industrial-4.jpg"
+// ── Hydraulic & Sanitation Gallery ───────────────────────────────────────────
+export const SANITARY_1 = "/assets/sanitary/sanitary-1.jpg"
+export const SANITARY_2 = "/assets/sanitary/sanitary-2.jpg"
+export const SANITARY_3 = "/assets/sanitary/sanitary-3.jpg"
+export const SANITARY_4 = "/assets/sanitary/sanitary-4.jpg"
+
 // ── Miscellaneous ─────────────────────────────────────────────────────────────
 export const INTERIOR   = "/assets/interior.jpg"
 export const HERO_EXTRA = "/assets/hero.jpg"
 export const FOUNDER    = "/assets/founder.jpg"
+
+

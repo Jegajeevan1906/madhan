@@ -22,6 +22,22 @@ import {
   HERO_DAY,
   HERO_NIGHT,
   INTERIOR,
+  INFRA_1,
+  INFRA_2,
+  INFRA_3,
+  INFRA_4,
+  TURNKEY_1,
+  TURNKEY_2,
+  TURNKEY_3,
+  TURNKEY_4,
+  INDUSTRIAL_1,
+  INDUSTRIAL_2,
+  INDUSTRIAL_3,
+  INDUSTRIAL_4,
+  SANITARY_1,
+  SANITARY_2,
+  SANITARY_3,
+  SANITARY_4,
 } from "../lib/images"
 
 const fadeUpVariant = {
@@ -209,11 +225,10 @@ export function Home() {
                 title: "Infrastructure & Civil",
                 desc: "Execution of roads, highways, bridges, flyovers, and allied transportation networks.",
                 gallery: [
-                  "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1584467735815-f778f274e296?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=90"
+                  INFRA_1,
+                  INFRA_2,
+                  INFRA_3,
+                  INFRA_4
                 ]
               },
               {
@@ -221,11 +236,10 @@ export function Home() {
                 title: "EPC & Turnkey Contracts",
                 desc: "End-to-end engineering, procurement, and construction for government and private entities.",
                 gallery: [
-                  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=90"
+                  TURNKEY_1,
+                  TURNKEY_2,
+                  TURNKEY_3,
+                  TURNKEY_4
                 ]
               },
               {
@@ -233,11 +247,10 @@ export function Home() {
                 title: "Industrial & Commercial",
                 desc: "Construction of warehouses, industrial sheds, and high-rise commercial spaces.",
                 gallery: [
-                  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=90"
+                  INDUSTRIAL_1,
+                  INDUSTRIAL_2,
+                  INDUSTRIAL_3,
+                  INDUSTRIAL_4
                 ]
               },
               {
@@ -257,11 +270,10 @@ export function Home() {
                 title: "Hydraulic & Sanitation",
                 desc: "Irrigation projects, dams, water treatment, sewerage, and storm water management.",
                 gallery: [
-                  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1617150536770-ac1788777e30?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1468436139062-f60a71c5c892?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=1920&q=90"
+                  SANITARY_1,
+                  SANITARY_2,
+                  SANITARY_3,
+                  SANITARY_4
                 ]
               },
               {
@@ -269,11 +281,11 @@ export function Home() {
                 title: "Project Management & Consulting",
                 desc: "We provide comprehensive project management and consulting services. From feasibility studies to on-site supervision, we ensure flawless delivery.",
                 gallery: [
-                  "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1920&q=90",
+                  "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1920&q=90",
                   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=90",
                   "https://images.unsplash.com/photo-1567521464027-f127ff144326?auto=format&fit=crop&w=1920&q=90",
                   "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=90"
+                  "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1920&q=90"
                 ]
               },
             ] as const).map((cap, idx) => (
@@ -296,7 +308,7 @@ export function Home() {
                       <cap.icon className="h-5 w-5" />
                     </span>
                     <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-black/60 text-gold border border-gold/30 backdrop-blur-md">
-                      5 Photos
+                      {cap.gallery.length} Photos
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-white mb-1.5">{cap.title}</h3>
