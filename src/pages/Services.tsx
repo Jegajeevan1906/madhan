@@ -82,9 +82,12 @@ const services = [
 ]
 
 export function Services() {
+  const { theme } = useTheme()
+  const isNight = theme === "dark"
+
   return (
     <>
-      {/* Services hero uses local /assets/services-day.webp and services-night.webp */}
+      {/* Services hero uses local /assets/services-day.png and services-night.png */}
       <PageHero
         dayImage={SERVICES_DAY}
         nightImage={SERVICES_NIGHT}
@@ -165,12 +168,34 @@ export function Services() {
           viewport={{ once: true, margin: "-100px" }}
           className="mx-auto max-w-7xl"
         >
-          <div
-            className="cta-services-bg relative overflow-hidden rounded-[2.5rem] px-6 py-28 text-center sm:px-14 md:py-40 shadow-2xl"
-            style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=95')`
-            }}
-          >
+          <div className="relative overflow-hidden rounded-[2.5rem] px-6 py-28 text-center sm:px-14 md:py-40 shadow-2xl">
+            {/* Night Banner Image (Dark Theme) */}
+            <img
+              src={SERVICES_NIGHT}
+              alt="Services Night View"
+              loading="lazy"
+              style={{
+                position: "absolute", inset: 0, zIndex: 0,
+                width: "100%", height: "100%", objectFit: "cover",
+                opacity: isNight ? 1 : 0,
+                transition: "opacity 700ms cubic-bezier(0.4,0,0.2,1)",
+              }}
+            />
+            {/* Day Banner Image (Bright / Light Theme) */}
+            <img
+              src={SERVICES_DAY}
+              alt="Services Day View"
+              loading="lazy"
+              style={{
+                position: "absolute", inset: 0, zIndex: 0,
+                width: "100%", height: "100%", objectFit: "cover",
+                opacity: isNight ? 0 : 1,
+                transition: "opacity 700ms cubic-bezier(0.4,0,0.2,1)",
+              }}
+            />
+            {/* Gradient Overlay for Text Legibility */}
+            <div className="absolute inset-0 z-[1] bg-gradient-to-br from-black/75 via-black/65 to-black/80" />
+
             <div className="relative z-10 mx-auto max-w-3xl">
               <h2 className="text-3xl font-extrabold leading-[1.1] sm:text-5xl text-white">
                 Ready to Start Your Project?
