@@ -17,7 +17,7 @@ const staggerContainer = {
 export function Contact() {
   return (
     <>
-      {/* Contact hero uses local assets */}
+      {/* Contact hero uses newly generated banner image */}
       <PageHero
         dayImage={CONTACT_DAY}
         nightImage={CONTACT_NIGHT}
@@ -36,101 +36,110 @@ export function Contact() {
         >
           <div className="text-center mb-16">
             <p className="eyebrow">Connect With Us</p>
-            <h2 className="section-heading mt-3 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">We're here to help</h2>
+            <h2 className="section-heading mt-3 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">We're here to build together</h2>
             <p className="section-body mt-5 text-base leading-relaxed max-w-2xl mx-auto">
-              Reach out to us directly via phone, email, or WhatsApp. Our team is available to assist you with project inquiries and consultations.
+              Reach out via phone, email, or WhatsApp. Our executive team will review your inquiry promptly.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Main Office Card - spans 2 columns on desktop */}
-            <motion.div variants={fadeUpVariant} className="md:col-span-2 glass rounded-3xl p-10 sm:p-14 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe bg-gradient-to-br from-card/80 to-card/40 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
-                <MapPin className="h-40 w-40" />
-              </div>
-              <div>
-                <span className="grid h-20 w-20 place-items-center rounded-2xl bg-gold/10 border border-gold/30 text-gold mb-8 shadow-lg shadow-gold/10 backdrop-blur-md">
-                  <MapPin className="h-10 w-10" />
+          <motion.div variants={fadeUpVariant} className="max-w-5xl mx-auto space-y-6">
+            
+            {/* Office Card */}
+            <div className="glass rounded-3xl p-8 sm:p-12 transition-all duration-500 hover:-translate-y-1.5 hover:border-gold hover:shadow-luxe relative overflow-hidden bg-gradient-to-br from-card/90 via-card/60 to-card/40">
+              <div className="flex flex-col sm:flex-row items-start gap-6">
+                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gold/10 border border-gold/30 text-gold shadow-md">
+                  <MapPin className="h-8 w-8" />
                 </span>
-                <p className="text-sm uppercase tracking-[0.25em] text-gold font-bold mb-4">Corporate Head Office</p>
-                <h3 className="text-2xl sm:text-3xl font-display font-bold leading-tight mb-4">SEENI INFRA PVT LTD</h3>
-                <p className="text-lg leading-relaxed font-medium text-muted-foreground max-w-md">
-                  NO:99/18, 2nd Floor, Padi Kuppam Road,<br/>
-                  Gandhi Nagar, Anna Nagar West,<br/>
-                  Chennai 600040, Tamil Nadu
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Business Hours Card */}
-            <motion.div variants={fadeUpVariant} className="glass rounded-3xl p-10 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe">
-              <div>
-                <span className="grid h-16 w-16 place-items-center rounded-2xl bg-gold/10 border border-gold/20 text-gold mb-6 shadow-lg shadow-gold/5">
-                  <Clock className="h-8 w-8" />
-                </span>
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground font-bold mb-3">Business Hours</p>
-                <div className="space-y-2">
-                  <p className="text-lg font-bold text-foreground">Mon – Sat</p>
-                  <p className="text-base text-muted-foreground">09:00 AM – 06:00 PM</p>
-                  <p className="text-base text-muted-foreground mt-4 pt-4 border-t border-border">Sunday: Closed</p>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-1">Corporate Head Office</p>
+                  <h3 className="text-2xl sm:text-3xl font-display font-bold leading-tight mb-3">SEENI INFRA PVT LTD</h3>
+                  <p className="text-base leading-relaxed text-muted-foreground">
+                    NO:99/18, 2nd Floor, Padi Kuppam Road,<br/>
+                    Gandhi Nagar, Anna Nagar West,<br/>
+                    Chennai 600040, Tamil Nadu, India
+                  </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Direct Line Card */}
-            <motion.div variants={fadeUpVariant} className="glass rounded-3xl p-10 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe">
-              <div>
-                <span className="grid h-16 w-16 place-items-center rounded-2xl bg-gold/10 border border-gold/20 text-gold mb-6 shadow-lg shadow-gold/5">
-                  <Phone className="h-8 w-8" />
-                </span>
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground font-bold mb-3">Direct Line</p>
-                <p className="text-2xl leading-relaxed font-bold text-foreground">+91 9445657505</p>
+            {/* Grid of Hours, Phone, Email & WhatsApp */}
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              
+              {/* Business Hours */}
+              <div className="glass rounded-3xl p-8 transition-all duration-500 hover:-translate-y-1 hover:border-gold hover:shadow-luxe flex flex-col justify-between">
+                <div>
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gold/10 border border-gold/20 text-gold mb-5">
+                    <Clock className="h-6 w-6" />
+                  </span>
+                  <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-bold mb-1">Business Hours</p>
+                  <p className="text-lg font-bold text-foreground">Mon – Sat</p>
+                  <p className="text-sm text-muted-foreground mt-1">09:00 AM – 06:00 PM</p>
+                </div>
               </div>
-              <a href="tel:+919445657505" className="mt-8 btn-ghost px-8 py-4 rounded-xl border border-border/50 hover:border-gold/50 text-center font-bold">Call Now</a>
-            </motion.div>
 
-            {/* Email Card */}
-            <motion.div variants={fadeUpVariant} className="glass rounded-3xl p-10 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe">
-              <div>
-                <span className="grid h-16 w-16 place-items-center rounded-2xl bg-gold/10 border border-gold/20 text-gold mb-6 shadow-lg shadow-gold/5">
-                  <Mail className="h-8 w-8" />
-                </span>
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground font-bold mb-3">Email Address</p>
-                <p className="text-xl leading-relaxed font-bold text-foreground">info@seeni.in</p>
+              {/* Direct Line */}
+              <div className="glass rounded-3xl p-8 transition-all duration-500 hover:-translate-y-1 hover:border-gold hover:shadow-luxe flex flex-col justify-between">
+                <div>
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gold/10 border border-gold/20 text-gold mb-5">
+                    <Phone className="h-6 w-6" />
+                  </span>
+                  <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-bold mb-1">Direct Line</p>
+                  <p className="text-lg font-bold text-foreground">+91 9445657505</p>
+                </div>
+                <a href="tel:+919445657505" className="inline-block text-xs font-bold text-gold hover:underline mt-4">Call Now &rarr;</a>
               </div>
-              <a href="mailto:info@seeni.in" className="mt-8 btn-ghost px-8 py-4 rounded-xl border border-border/50 hover:border-gold/50 text-center font-bold">Send Email</a>
-            </motion.div>
 
-            {/* WhatsApp & Social Support */}
-            <motion.div variants={fadeUpVariant} className="md:col-span-1 glass rounded-3xl p-10 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-[#25D366]/50 hover:shadow-luxe bg-gradient-to-br from-card/80 to-card/40">
-              <div>
-                <span className="grid h-16 w-16 place-items-center rounded-2xl bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] mb-6 shadow-lg shadow-[#25D366]/5">
-                  <MessageCircle className="h-8 w-8" />
-                </span>
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground font-bold mb-3">Instant Support</p>
-                <p className="text-lg leading-relaxed font-bold mb-6 text-foreground">Chat with our experts directly.</p>
-                <div className="flex items-center gap-4">
+              {/* Email Address */}
+              <div className="glass rounded-3xl p-8 transition-all duration-500 hover:-translate-y-1 hover:border-gold hover:shadow-luxe flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                <div>
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gold/10 border border-gold/20 text-gold mb-5">
+                    <Mail className="h-6 w-6" />
+                  </span>
+                  <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-bold mb-1">Email Address</p>
+                  <p className="text-lg font-bold text-foreground">info@seeni.in</p>
+                </div>
+                <a href="mailto:info@seeni.in" className="inline-block text-xs font-bold text-gold hover:underline mt-4">Send Email &rarr;</a>
+              </div>
+
+            </div>
+
+            {/* WhatsApp & Social Support Banner */}
+            <div className="glass rounded-3xl p-8 sm:p-10 transition-all duration-500 hover:-translate-y-1 hover:border-[#25D366]/40 hover:shadow-luxe bg-gradient-to-br from-card/90 via-card/70 to-card/40">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex items-center gap-5 text-center sm:text-left">
+                  <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366]">
+                    <MessageCircle className="h-7 w-7" />
+                  </span>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-bold">Instant Support</p>
+                    <h4 className="text-xl font-bold text-foreground mt-1">Chat Live With Our Executive Team</h4>
+                    <p className="text-sm text-muted-foreground mt-1">Get immediate answers for project inquiries and site visits.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 w-full md:w-auto">
                   <a
                     href="https://wa.me/919445657505"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 btn-gold py-4 px-6 text-base bg-[#25D366] hover:bg-[#1ebd5a] text-black font-bold shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 rounded-xl flex items-center justify-center gap-2"
+                    className="flex-1 md:flex-initial btn-gold py-3.5 px-6 text-sm bg-[#25D366] hover:bg-[#1ebd5a] text-black font-bold shadow-md shadow-[#25D366]/20 rounded-xl flex items-center justify-center gap-2 transition-all duration-300"
                   >
-                    <MessageCircle className="h-5 w-5" /> WhatsApp Us
+                    <MessageCircle className="h-4 w-4" /> WhatsApp Us
                   </a>
                   <a
                     href="https://www.instagram.com/seeniinfra?igsh=OWRpNGhmeXl0a280"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="grid h-14 w-14 shrink-0 place-items-center rounded-xl border border-border bg-card transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold shadow-sm hover:shadow-gold/20"
+                    className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-border bg-card transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold shadow-sm"
                     aria-label="Instagram"
                   >
-                    <Instagram className="h-6 w-6" />
+                    <Instagram className="h-5 w-5" />
                   </a>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+
+          </motion.div>
         </motion.div>
       </section>
 

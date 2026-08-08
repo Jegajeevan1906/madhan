@@ -208,51 +208,45 @@ export function Home() {
                 icon: HardHat,
                 title: "Infrastructure & Civil",
                 desc: "Execution of roads, highways, bridges, flyovers, and allied transportation networks.",
-                imgUrl: "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=1200&q=90",
-                imgUrlHD: "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=3840&q=95"
+                img: "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=1920&q=90",
               },
               {
                 icon: Building2,
                 title: "EPC & Turnkey Contracts",
                 desc: "End-to-end engineering, procurement, and construction for government and private entities.",
-                imgUrl: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=90",
-                imgUrlHD: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=3840&q=95"
+                img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=90",
               },
               {
                 icon: Factory,
                 title: "Industrial & Commercial",
                 desc: "Construction of warehouses, industrial sheds, and high-rise commercial spaces.",
-                imgUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=90",
-                imgUrlHD: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=3840&q=95"
+                img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=90",
               },
               {
                 icon: House,
                 title: "Residential & Urban",
                 desc: "Development of plots, luxury villas, residential layouts, and high-rise apartments.",
-                imgUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=90",
-                imgUrlHD: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=3840&q=95"
+                img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=90",
               },
               {
                 icon: ShieldCheck,
                 title: "Hydraulic & Sanitation",
                 desc: "Irrigation projects, dams, water treatment, sewerage, and storm water management.",
-                imgUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=90",
-                imgUrlHD: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=3840&q=95"
+                img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=90",
               },
               {
                 icon: ClipboardList,
                 title: "Project Management & Consulting",
                 desc: "We provide comprehensive project management and consulting services. From feasibility studies to on-site supervision, we ensure flawless delivery.",
-                imgUrl: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=90",
-                imgUrlHD: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=3840&q=95"
+                img: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1920&q=90",
               },
             ] as const).map((cap, idx) => (
               <motion.div key={idx} variants={fadeUpVariant}
                 className="group relative overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:shadow-luxe h-[350px] flex flex-col justify-end cursor-zoom-in"
                 data-zoomable="true"
-                data-zoom-src={cap.imgUrlHD}>
+                data-zoom-src={cap.img}>
                 <img
-                  src={cap.imgUrl}
+                  src={cap.img}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   alt={cap.title}
                   loading="lazy"
@@ -260,9 +254,11 @@ export function Home() {
                 />
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/92 via-black/38 to-transparent" />
                 <div className="relative z-10 p-7">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-gold text-black mb-4 shadow-lg transition-transform duration-300 group-hover:scale-110">
-                    <cap.icon className="h-5 w-5" />
-                  </span>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-gold text-black shadow-lg transition-transform duration-300 group-hover:scale-110">
+                      <cap.icon className="h-5 w-5" />
+                    </span>
+                  </div>
                   <h3 className="text-lg font-bold text-white mb-1.5">{cap.title}</h3>
                   <p className="text-xs leading-relaxed text-gray-300/80 opacity-0 translate-y-3 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 line-clamp-2">
                     {cap.desc}

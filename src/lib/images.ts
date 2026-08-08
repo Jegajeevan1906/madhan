@@ -18,16 +18,16 @@ export const ABOUT_DAY   = "/assets/about-day.png"
 export const ABOUT_NIGHT = "/assets/about-night.png"
 
 // ── Services — theme-aware ────────────────────────────────────────────────────
-export const SERVICES_DAY   = "/assets/services-day.png"
-export const SERVICES_NIGHT = "/assets/services-night.png"
+export const SERVICES_DAY   = "/assets/services-banner-day.png"
+export const SERVICES_NIGHT = "/assets/services-banner-night.png"
 
 // ── Blog — theme-aware ────────────────────────────────────────────────────────
 export const BLOG_DAY   = "/assets/blog-day.png"
 export const BLOG_NIGHT = "/assets/blog-night.png"
 
 // ── Contact — theme-aware ─────────────────────────────────────────────────────
-export const CONTACT_DAY   = "/assets/contact-day.png"
-export const CONTACT_NIGHT = "/assets/contact-night.png"
+export const CONTACT_DAY   = "/assets/contact-banner-day.png"
+export const CONTACT_NIGHT = "/assets/contact-banner-night.png"
 
 // ── Projects ──────────────────────────────────────────────────────────────────
 export const PROJECT_1 = "/assets/project-1.jpg"

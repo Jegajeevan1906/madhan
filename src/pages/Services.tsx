@@ -82,12 +82,9 @@ const services = [
 ]
 
 export function Services() {
-  const { theme } = useTheme()
-  const isNight = theme === "dark"
-
   return (
     <>
-      {/* Services hero uses local /assets/services-day.png and services-night.png */}
+      {/* Services hero uses local /assets/services-day.webp and services-night.webp */}
       <PageHero
         dayImage={SERVICES_DAY}
         nightImage={SERVICES_NIGHT}
@@ -105,7 +102,7 @@ export function Services() {
           className="mx-auto max-w-7xl"
         >
           <div className="max-w-2xl text-center mx-auto">
-            <p className="eyebrow">What We Do</p>
+            <p className="eyebrow">What We Deliver</p>
             <h2 className="section-heading mt-4 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">Our core disciplines</h2>
             <p className="section-body mt-5 text-base leading-relaxed max-w-xl mx-auto">
               Six specialist service lines, each backed by expert teams and a commitment to uncompromising quality.
@@ -139,9 +136,13 @@ export function Services() {
 
                 <div className="relative z-10 flex h-full flex-col p-8">
                   <div className="flex items-start justify-between mb-auto">
-                    <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gold text-black shadow-lg transform transition-transform duration-300 group-hover:scale-110">
-                      <service.icon className="h-6 w-6" />
-                    </span>
+                    <motion.span 
+                      whileHover={{ scale: 1.18, rotate: 2 }}
+                      whileTap={{ scale: 1.12 }}
+                      className="grid h-14 w-14 place-items-center rounded-2xl bg-gold text-black shadow-lg shadow-gold/20 transition-all duration-300 group-hover:scale-110 group-hover:shadow-gold/40 cursor-pointer select-none"
+                    >
+                      <service.icon className="h-6 w-6 transition-transform duration-300" />
+                    </motion.span>
                     <span className="font-display text-4xl font-bold text-white/20 transition-colors duration-500 group-hover:text-gold/40">
                       {service.num}
                     </span>
@@ -168,35 +169,14 @@ export function Services() {
           viewport={{ once: true, margin: "-100px" }}
           className="mx-auto max-w-7xl"
         >
-          <div className="relative overflow-hidden rounded-[2.5rem] px-6 py-28 text-center sm:px-14 md:py-40 shadow-2xl">
-            {/* Night Banner Image (Dark Theme) */}
-            <img
-              src={SERVICES_NIGHT}
-              alt="Services Night View"
-              loading="lazy"
-              style={{
-                position: "absolute", inset: 0, zIndex: 0,
-                width: "100%", height: "100%", objectFit: "cover",
-                opacity: isNight ? 1 : 0,
-                transition: "opacity 700ms cubic-bezier(0.4,0,0.2,1)",
-              }}
-            />
-            {/* Day Banner Image (Bright / Light Theme) */}
-            <img
-              src={SERVICES_DAY}
-              alt="Services Day View"
-              loading="lazy"
-              style={{
-                position: "absolute", inset: 0, zIndex: 0,
-                width: "100%", height: "100%", objectFit: "cover",
-                opacity: isNight ? 0 : 1,
-                transition: "opacity 700ms cubic-bezier(0.4,0,0.2,1)",
-              }}
-            />
-            {/* Gradient Overlay for Text Legibility */}
-            <div className="absolute inset-0 z-[1] bg-gradient-to-br from-black/75 via-black/65 to-black/80" />
-
+          <div
+            className="cta-services-bg relative overflow-hidden rounded-[2.5rem] px-6 py-28 text-center sm:px-14 md:py-40 shadow-2xl bg-cover bg-center"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.82)), url('/assets/services-banner-night.png')`
+            }}
+          >
             <div className="relative z-10 mx-auto max-w-3xl">
+              <span className="text-gold text-xs font-bold uppercase tracking-[0.25em] mb-4 inline-block">Enterprise Tech Campus Infrastructure</span>
               <h2 className="text-3xl font-extrabold leading-[1.1] sm:text-5xl text-white">
                 Ready to Start Your Project?
               </h2>
