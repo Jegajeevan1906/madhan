@@ -1,0 +1,21 @@
+{
+  "name": "SEENI INFRA PVT LTD",
+  "short_name": "SEENI INFRA",
+  "description": "Premium Civil Engineering & Infrastructure Development Company",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#d4af37",
+  "background_color": "#0a0a0a",
+  "display": "browser",
+  "start_url": "/"
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#d4af37" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEENI INFRA PVT LTD | Civil Engineering &amp; Infrastructure Company</title>
+    <meta name="description" content="Professional civil engineering, infrastructure development, industrial construction, commercial construction and turnkey project solutions across Tamil Nadu." />
+    <meta name="keywords" content="civil engineering, infrastructure, construction company, Chennai, Tamil Nadu, industrial construction, commercial construction, turnkey projects, SEENI INFRA" />
+    <meta name="author" content="SEENI INFRA PVT LTD" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seeniinfra.com/" />
+    <meta property="og:title" content="SEENI INFRA PVT LTD | Civil Engineering &amp; Infrastructure Company" />
+    <meta property="og:description" content="Professional civil engineering, infrastructure development, industrial construction, commercial construction and turnkey project solutions across Tamil Nadu." />
+    <meta property="og:image" content="/assets/logo-transparent.png" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SEENI INFRA PVT LTD | Civil Engineering &amp; Infrastructure Company" />
+    <meta name="twitter:description" content="Professional civil engineering, infrastructure development, industrial construction, commercial construction and turnkey project solutions across Tamil Nadu." />
+    <meta name="twitter:image" content="/assets/logo-transparent.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SEENI INFRA PVT LTD",
+      "description": "Professional civil engineering, infrastructure development, industrial construction, commercial construction and turnkey project solutions across Tamil Nadu.",
+      "foundingDate": "2025-12-29",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "NO:99/18, 2nd Floor, Padi Kuppam Road, Gandhi Nagar, Anna Nagar West",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600040",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-9445657505",
+      "email": "info@seeni.in",
+      "logo": "/assets/logo-transparent.png",
+      "url": "https://seeniinfra.com/"
+    }
+    </script>
+
+    <!--
+      THEME FLASH PREVENTION
+      This script runs synchronously before React hydrates, reading the
+      saved theme from localStorage and applying [data-theme] to <html>
+      immediately. This prevents any white/dark flash on page load/refresh.
+    -->
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('vite-ui-theme') || 'light';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch(e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+
+    <!-- Hero image preload — ensures the above-the-fold image is instantly ready -->
+    <link rel="preload" as="image" href="/assets/hero-day.webp" />
+    <link rel="preload" as="image" href="/assets/hero-night.webp" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
