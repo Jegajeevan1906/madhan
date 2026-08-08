@@ -38,6 +38,10 @@ import {
   SANITARY_2,
   SANITARY_3,
   SANITARY_4,
+  CONSULTING_1,
+  CONSULTING_2,
+  CONSULTING_3,
+  CONSULTING_4,
 } from "../lib/images"
 
 const fadeUpVariant = {
@@ -281,11 +285,10 @@ export function Home() {
                 title: "Project Management & Consulting",
                 desc: "We provide comprehensive project management and consulting services. From feasibility studies to on-site supervision, we ensure flawless delivery.",
                 gallery: [
-                  "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1567521464027-f127ff144326?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=90",
-                  "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1920&q=90"
+                  CONSULTING_1,
+                  CONSULTING_2,
+                  CONSULTING_3,
+                  CONSULTING_4
                 ]
               },
             ] as const).map((cap, idx) => (

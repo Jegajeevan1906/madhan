@@ -55,6 +55,11 @@ export const SANITARY_1 = "/assets/sanitary/sanitary-1.jpg"
 export const SANITARY_2 = "/assets/sanitary/sanitary-2.jpg"
 export const SANITARY_3 = "/assets/sanitary/sanitary-3.jpg"
 export const SANITARY_4 = "/assets/sanitary/sanitary-4.jpg"
+// ── Project Management & Consulting Gallery ───────────────────────────────────
+export const CONSULTING_1 = "/assets/consulting/consulting-1.jpg"
+export const CONSULTING_2 = "/assets/consulting/consulting-2.jpg"
+export const CONSULTING_3 = "/assets/consulting/consulting-3.jpg"
+export const CONSULTING_4 = "/assets/consulting/consulting-4.jpg"
 
 // ── Miscellaneous ─────────────────────────────────────────────────────────────
 export const INTERIOR   = "/assets/interior.jpg"
