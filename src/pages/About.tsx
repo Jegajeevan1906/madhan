@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import { Gem, HeartHandshake, Compass, Eye, Quote } from "lucide-react"
+import { Gem, HeartHandshake, Compass, Eye, Quote, ExternalLink } from "lucide-react"
 import { Link } from "react-router-dom"
 import { PageHero } from "../components/PageHero"
 import { ABOUT_DAY, ABOUT_NIGHT } from "../lib/images"
@@ -117,6 +117,14 @@ export function About() {
                   Anita Kumari
                 </h2>
                 <p className="text-gold font-bold tracking-widest text-sm mt-3 uppercase">Managing Director</p>
+                <a
+                  href="https://india5000.com/winners/2025/india-5000-best-msme-awards-2025/atechssystem-integrator-pvt-ltd-1753769740126"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-gold transition-colors mt-2.5 font-medium underline underline-offset-4 decoration-gold/40 hover:decoration-gold break-all"
+                >
+                  https://india5000.com/winners/2025/india-5000-best-msme-awards-2025/atechssystem-integrator-pvt-ltd-1753769740126 <ExternalLink className="h-3 w-3 shrink-0" />
+                </a>
 
                 <Quote className="h-8 w-8 text-gold mt-8 mb-4 opacity-50" />
                 <p className="text-xl font-display leading-relaxed">
