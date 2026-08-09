@@ -64,14 +64,6 @@ export function Blog() {
                 <div>
                   <h3 className="text-3xl font-extrabold font-display tracking-tight leading-tight">Anita Kumari</h3>
                   <p className="text-base text-gold tracking-widest uppercase mt-2 font-semibold">Managing Director</p>
-                  <a
-                    href="https://india5000.com/winners/2025/india-5000-best-msme-awards-2025/atechssystem-integrator-pvt-ltd-1753769740126"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-gold transition-colors mt-2.5 font-medium underline underline-offset-4 decoration-gold/40 hover:decoration-gold break-all"
-                  >
-                    https://india5000.com/winners/2025/india-5000-best-msme-awards-2025/atechssystem-integrator-pvt-ltd-1753769740126 <ExternalLink className="h-3 w-3 shrink-0" />
-                  </a>
                 </div>
                 <div className="flex gap-3">
                   <a
