@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import { Gem, HeartHandshake, Compass, Eye, Quote, ExternalLink } from "lucide-react"
+import { Gem, HeartHandshake, Compass, Eye, Quote } from "lucide-react"
 import { Link } from "react-router-dom"
 import { PageHero } from "../components/PageHero"
 import { ABOUT_DAY, ABOUT_NIGHT } from "../lib/images"
