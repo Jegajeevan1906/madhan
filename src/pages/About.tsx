@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react"
 import { Gem, HeartHandshake, Compass, Eye, Quote } from "lucide-react"
-import { Link } from "react-router-dom"
 import { PageHero } from "../components/PageHero"
 import { ABOUT_DAY, ABOUT_NIGHT } from "../lib/images"
 
@@ -126,12 +125,6 @@ export function About() {
                 <p className="mt-8 text-base leading-relaxed text-muted-foreground">
                   With a visionary approach to modern infrastructure and a passion for the "Make in India" initiative, Anita Kumari established SEENI INFRA PVT LTD to redefine standards in the construction landscape. Her leadership has instilled a culture of precision, accountability, and quality (QCD) across all commercial, residential, and industrial sectors.
                 </p>
-
-                <div className="mt-10">
-                  <Link to="/blog" className="btn-gold inline-flex">
-                    View Full Profile
-                  </Link>
-                </div>
               </div>
             </div>
           </div>

@@ -17,6 +17,8 @@ interface PageHeroProps {
    * Defaults to "68vh". Pass "50vh" for shorter banners.
    */
   minHeight?: string
+  /** Custom object-position for background images (e.g. "center top") */
+  objectPosition?: string
   /** Extra content rendered inside the glass panel (e.g. buttons) */
   children?: React.ReactNode
 }
@@ -53,6 +55,7 @@ export function PageHero({
   title,
   description,
   minHeight = "68vh",
+  objectPosition = "center 40%",
   children,
 }: PageHeroProps) {
   const { theme } = useTheme()
@@ -100,7 +103,7 @@ export function PageHero({
         style={{
           position: "absolute", inset: 0, zIndex: -20,
           width: "100%", height: "100%", objectFit: "cover",
-          objectPosition: "center 40%",
+          objectPosition,
           opacity: isNight ? 1 : 0,
           transition: "opacity 700ms cubic-bezier(0.4, 0, 0.2, 1)",
         }}
@@ -118,7 +121,7 @@ export function PageHero({
         style={{
           position: "absolute", inset: 0, zIndex: -20,
           width: "100%", height: "100%", objectFit: "cover",
-          objectPosition: "center 40%",
+          objectPosition,
           opacity: isNight ? 0 : 1,
           transition: "opacity 700ms cubic-bezier(0.4, 0, 0.2, 1)",
         }}

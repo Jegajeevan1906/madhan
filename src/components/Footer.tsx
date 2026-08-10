@@ -2,40 +2,58 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { Instagram, Linkedin, Twitter } from "./Icons"
 import { ArrowUp, Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react"
+import { useTheme } from "./ThemeContext"
 
 export function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const { theme } = useTheme()
+  const isDark = theme === "dark"
+  const [email, setEmail] = useState("")
+  const [subscribed, setSubscribed] = useState(false)
 
   const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setSubscribed(true);
+    e.preventDefault()
+    if (!email) return
+    setSubscribed(true)
     setTimeout(() => {
-      setSubscribed(false);
-      setEmail("");
-    }, 4000);
-  };
+      setSubscribed(false)
+      setEmail("")
+    }, 4000)
+  }
 
   return (
-    <footer className="relative overflow-hidden bg-white border-t border-gray-200 text-slate-700 font-sans py-12">
+    <footer
+      className={`relative overflow-hidden font-sans py-12 border-t transition-colors duration-500 ${
+        isDark
+          ? "bg-[#0A0A0A] text-slate-200 border-white/10"
+          : "bg-white text-slate-700 border-gray-200"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         
         {/* ── Top Bar: Logo & Tagline (Left) + Social Media Icons (Right) ── */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-8 border-b border-gray-200">
-          
+        <div
+          className={`flex flex-col sm:flex-row items-center justify-between gap-4 pb-8 border-b ${
+            isDark ? "border-white/10" : "border-gray-200"
+          }`}
+        >
           {/* Left: Logo & Tagline */}
           <div className="flex items-center gap-3 text-left">
             <Link to="/" className="inline-block shrink-0">
               <img
                 src="/assets/logo-transparent.png"
                 alt="SEENI INFRA PVT LTD"
-                className="h-10 w-auto object-contain drop-shadow-sm brightness-0"
+                className={`h-10 w-auto object-contain drop-shadow-sm transition-all duration-300 ${
+                  isDark ? "brightness-0 invert opacity-95" : "brightness-0"
+                }`}
               />
             </Link>
-            <div className="border-l border-gray-300 pl-3 py-0.5">
-              <p className="text-[11px] uppercase tracking-[0.2em] font-bold text-gold leading-none">SEENI INFRA PVT LTD</p>
-              <p className="text-[11px] text-slate-500 mt-0.5 font-medium leading-none">Crafted With Precision. Built to Last.</p>
+            <div className={`border-l pl-3 py-0.5 ${isDark ? "border-white/20" : "border-gray-300"}`}>
+              <p className="text-[11px] uppercase tracking-[0.2em] font-bold text-gold leading-none">
+                SEENI INFRA PVT LTD
+              </p>
+              <p className={`text-[11px] mt-0.5 font-medium leading-none ${isDark ? "text-slate-400" : "text-slate-500"}`}>
+                Crafted With Precision. Built to Last.
+              </p>
             </div>
           </div>
 
@@ -52,7 +70,11 @@ export function Footer() {
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={label}
-                className="grid h-9 w-9 place-items-center rounded-full bg-slate-100 border border-gray-200 text-slate-600 transition-all duration-300 hover:bg-gold hover:border-gold hover:text-black hover:scale-105"
+                className={`grid h-9 w-9 place-items-center rounded-full border transition-all duration-300 hover:bg-gold hover:border-gold hover:text-black hover:scale-105 ${
+                  isDark
+                    ? "bg-white/5 border-white/10 text-slate-300"
+                    : "bg-slate-100 border-gray-200 text-slate-600"
+                }`}
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -61,8 +83,11 @@ export function Footer() {
         </div>
 
         {/* ── Three Columns Grid ── */}
-        <div className="grid gap-8 md:grid-cols-3 pt-8 pb-8 border-b border-gray-200 text-xs">
-
+        <div
+          className={`grid gap-8 md:grid-cols-3 pt-8 pb-8 border-b text-xs ${
+            isDark ? "border-white/10" : "border-gray-200"
+          }`}
+        >
           {/* Column 1: Quick Links */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gold mb-4 flex items-center gap-1.5">
@@ -80,7 +105,9 @@ export function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="inline-flex items-center gap-1 text-slate-600 transition-all duration-200 hover:text-gold hover:translate-x-0.5"
+                    className={`inline-flex items-center gap-1 transition-all duration-200 hover:text-gold hover:translate-x-0.5 ${
+                      isDark ? "text-slate-300" : "text-slate-600"
+                    }`}
                   >
                     <span className="text-gold text-[10px]">&rsaquo;</span>
                     {link.label}
@@ -96,7 +123,7 @@ export function Footer() {
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               Contact Us
             </h3>
-            <ul className="space-y-2 text-slate-600">
+            <ul className={`space-y-2 ${isDark ? "text-slate-300" : "text-slate-600"}`}>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-gold shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
@@ -124,7 +151,7 @@ export function Footer() {
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               Newsletter
             </h3>
-            <p className="text-slate-600 leading-relaxed mb-3">
+            <p className={`leading-relaxed mb-3 ${isDark ? "text-slate-300" : "text-slate-600"}`}>
               Subscribe for corporate updates & insights.
             </p>
 
@@ -141,7 +168,11 @@ export function Footer() {
                   placeholder="Your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-lg bg-slate-50 border border-gray-200 px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-gold focus:outline-none transition-all"
+                  className={`w-full rounded-lg px-3 py-2 text-xs border focus:border-gold focus:outline-none transition-all ${
+                    isDark
+                      ? "bg-white/5 border-white/15 text-white placeholder:text-slate-500"
+                      : "bg-slate-50 border-gray-200 text-slate-900 placeholder:text-slate-400"
+                  }`}
                 />
                 <button
                   type="submit"
@@ -152,21 +183,28 @@ export function Footer() {
               </form>
             )}
           </div>
-
         </div>
 
         {/* ── Bottom Bar: Copyright & Back To Top ── */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 font-medium">
+        <div className={`pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-medium ${
+          isDark ? "text-slate-400" : "text-slate-500"
+        }`}>
           <p className="text-center sm:text-left">
             &copy; {new Date().getFullYear()} SEENI INFRA PVT LTD. All rights reserved.
           </p>
 
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 text-slate-600 hover:text-gold transition-colors cursor-pointer group"
+            className={`flex items-center gap-2 transition-colors cursor-pointer group ${
+              isDark ? "text-slate-300 hover:text-gold" : "text-slate-600 hover:text-gold"
+            }`}
           >
             <span className="uppercase tracking-widest text-[10px] font-bold">Back to Top</span>
-            <span className="grid h-6 w-6 place-items-center rounded-full bg-slate-100 border border-gray-200 group-hover:border-gold group-hover:bg-gold group-hover:text-black transition-all">
+            <span className={`grid h-6 w-6 place-items-center rounded-full border group-hover:border-gold group-hover:bg-gold group-hover:text-black transition-all ${
+              isDark
+                ? "bg-white/5 border-white/10 text-slate-300"
+                : "bg-slate-100 border-gray-200 text-slate-600"
+            }`}>
               <ArrowUp className="h-3 w-3" />
             </span>
           </button>

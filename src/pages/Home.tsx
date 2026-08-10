@@ -26,22 +26,27 @@ import {
   INFRA_2,
   INFRA_3,
   INFRA_4,
+  INFRA_5,
   TURNKEY_1,
   TURNKEY_2,
   TURNKEY_3,
   TURNKEY_4,
+  TURNKEY_5,
   INDUSTRIAL_1,
   INDUSTRIAL_2,
   INDUSTRIAL_3,
   INDUSTRIAL_4,
+  INDUSTRIAL_5,
   SANITARY_1,
   SANITARY_2,
   SANITARY_3,
   SANITARY_4,
+  SANITARY_5,
   CONSULTING_1,
   CONSULTING_2,
   CONSULTING_3,
   CONSULTING_4,
+  CONSULTING_5,
 } from "../lib/images"
 
 const fadeUpVariant = {
@@ -232,7 +237,8 @@ export function Home() {
                   INFRA_1,
                   INFRA_2,
                   INFRA_3,
-                  INFRA_4
+                  INFRA_4,
+                  INFRA_5
                 ]
               },
               {
@@ -243,7 +249,8 @@ export function Home() {
                   TURNKEY_1,
                   TURNKEY_2,
                   TURNKEY_3,
-                  TURNKEY_4
+                  TURNKEY_4,
+                  TURNKEY_5
                 ]
               },
               {
@@ -254,7 +261,8 @@ export function Home() {
                   INDUSTRIAL_1,
                   INDUSTRIAL_2,
                   INDUSTRIAL_3,
-                  INDUSTRIAL_4
+                  INDUSTRIAL_4,
+                  INDUSTRIAL_5
                 ]
               },
               {
@@ -277,7 +285,8 @@ export function Home() {
                   SANITARY_1,
                   SANITARY_2,
                   SANITARY_3,
-                  SANITARY_4
+                  SANITARY_4,
+                  SANITARY_5
                 ]
               },
               {
@@ -288,7 +297,8 @@ export function Home() {
                   CONSULTING_1,
                   CONSULTING_2,
                   CONSULTING_3,
-                  CONSULTING_4
+                  CONSULTING_4,
+                  CONSULTING_5
                 ]
               },
             ] as const).map((cap, idx) => (

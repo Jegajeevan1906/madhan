@@ -137,11 +137,11 @@ export function Services() {
                 <div className="relative z-10 flex h-full flex-col p-8">
                   <div className="flex items-start justify-between mb-auto">
                     <motion.span 
-                      whileHover={{ scale: 1.18, rotate: 2 }}
-                      whileTap={{ scale: 1.12 }}
-                      className="grid h-14 w-14 place-items-center rounded-2xl bg-gold text-black shadow-lg shadow-gold/20 transition-all duration-300 group-hover:scale-110 group-hover:shadow-gold/40 cursor-pointer select-none"
+                      whileHover={{ scale: 1.15 }}
+                      whileTap={{ scale: 1.1 }}
+                      className="grid h-14 w-14 place-items-center rounded-2xl bg-gold text-black shadow-lg shadow-gold/20 transition-transform duration-300 ease-out group-hover:scale-110 hover:scale-110 active:scale-110 group-hover:shadow-gold/40 cursor-pointer select-none"
                     >
-                      <service.icon className="h-6 w-6 transition-transform duration-300" />
+                      <service.icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />
                     </motion.span>
                     <span className="font-display text-4xl font-bold text-white/20 transition-colors duration-500 group-hover:text-gold/40">
                       {service.num}
@@ -172,7 +172,7 @@ export function Services() {
           <div
             className="cta-services-bg relative overflow-hidden rounded-[2.5rem] px-6 py-28 text-center sm:px-14 md:py-40 shadow-2xl bg-cover bg-center"
             style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.82)), url('/assets/services-banner-night.png')`
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.82)), url('${SERVICES_NIGHT}')`
             }}
           >
             <div className="relative z-10 mx-auto max-w-3xl">

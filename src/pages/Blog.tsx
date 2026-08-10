@@ -41,6 +41,7 @@ export function Blog() {
         title="Managing Director"
         description="Visionary leadership driving SEENI INFRA PVT LTD towards Fortune 500 standards in global construction and infrastructure."
         minHeight="60vh"
+        objectPosition="right center"
       />
 
       {/* Profile Section */}
