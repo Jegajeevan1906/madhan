@@ -26,6 +26,7 @@ import {
   INFRA_2,
   INFRA_3,
   INFRA_4,
+  INFRA_5,
   TURNKEY_1,
   TURNKEY_2,
   TURNKEY_3,
@@ -236,7 +237,8 @@ export function Home() {
                   INFRA_1,
                   INFRA_2,
                   INFRA_3,
-                  INFRA_4
+                  INFRA_4,
+                  INFRA_5
                 ]
               },
               {

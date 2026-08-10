@@ -39,7 +39,7 @@ export const INFRA_1 = "/assets/infrastructure/infra-1.jpg"
 export const INFRA_2 = "/assets/infrastructure/infra-2.jpg"
 export const INFRA_3 = "/assets/infrastructure/infra-3.jpg"
 export const INFRA_4 = "/assets/infrastructure/infra-4.jpg"
-export const INFRA_5 = "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=90"
+export const INFRA_5 = "/assets/infrastructure/infra-5.jpg"
 
 // ── EPC & Turnkey Contracts Gallery ───────────────────────────────────────────
 export const TURNKEY_1 = "/assets/turnkey/turnkey-1.jpg"
