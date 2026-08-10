@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 import { Gem, HeartHandshake, Compass, Eye, Quote } from "lucide-react"
 import { PageHero } from "../components/PageHero"
-import { ABOUT_DAY, ABOUT_NIGHT } from "../lib/images"
+import { ABOUT_DAY, ABOUT_NIGHT, ANITA_KUMARI } from "../lib/images"
 
 export function About() {
   const revealRefs = useRef<(HTMLElement | null)[]>([])
@@ -99,8 +99,8 @@ export function About() {
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
             <div className="overflow-hidden rounded-3xl order-2 lg:order-1 group">
               <img
-                src="/assets/founder.jpg"
-                srcSet="/assets/founder.jpg 1x, /assets/founder.jpg 2x"
+                src={ANITA_KUMARI}
+                srcSet={`${ANITA_KUMARI} 1x, ${ANITA_KUMARI} 2x`}
                 alt="Anita Kumari Sam Vijaya Kumar — Managing Director, SEENI INFRA"
                 width="1200"
                 height="1400"

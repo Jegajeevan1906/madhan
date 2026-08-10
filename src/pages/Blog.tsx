@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react"
 import { Mail, Quote } from "lucide-react"
 import { Linkedin } from "../components/Icons"
 import { PageHero } from "../components/PageHero"
-import { BLOG_DAY, BLOG_NIGHT } from "../lib/images"
+import { BLOG_DAY, BLOG_NIGHT, ANITA_KUMARI } from "../lib/images"
 
 export function Blog() {
   const revealRefs = useRef<(HTMLElement | null)[]>([])
@@ -53,8 +53,8 @@ export function Blog() {
             <div className="lg:col-span-5 lg:sticky lg:top-32">
               <div className="glass overflow-hidden rounded-3xl border border-border p-2">
                 <img
-                  src="/assets/founder.jpg"
-                  srcSet="/assets/founder.jpg 1x, /assets/founder.jpg 2x"
+                  src={ANITA_KUMARI}
+                  srcSet={`${ANITA_KUMARI} 1x, ${ANITA_KUMARI} 2x`}
                   alt="Anita Kumari - Managing Director"
                   data-zoomable="true"
                   loading="lazy"

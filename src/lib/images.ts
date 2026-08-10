@@ -72,6 +72,8 @@ export const CONSULTING_5 = "https://images.unsplash.com/photo-1504307651254-356
 // ── Miscellaneous ─────────────────────────────────────────────────────────────
 export const INTERIOR   = "/assets/interior.jpg"
 export const HERO_EXTRA = "/assets/hero.jpg"
-export const FOUNDER    = "/assets/founder.jpg"
+export const FOUNDER    = "/assets/anita-kumari.jpeg"
+export const ANITA_KUMARI = "/assets/anita-kumari.jpeg"
+
 
 
