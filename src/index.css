@@ -37,10 +37,10 @@
     --secondary: #222222;
     --secondary-foreground: #ffffff;
     --muted: #1a1a1a;
-    --muted-foreground: #c8c8c8;
+    --muted-foreground: #f1f5f9;
     --accent: #d4af37;
     --accent-foreground: #0a0a0a;
-    --border: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.15);
     --ring: #d4af37;
     
     --gold: #d4af37;
@@ -51,18 +51,18 @@
 
   [data-theme="light"] {
     --background: #ffffff;
-    --foreground: #1A1A1A;
+    --foreground: #0f172a;
     --card: #ffffff;
-    --card-foreground: #1A1A1A;
-    --primary: #1A1A1A;
+    --card-foreground: #0f172a;
+    --primary: #0f172a;
     --primary-foreground: #ffffff;
-    --secondary: #f5f3ef;
-    --secondary-foreground: #1A1A1A;
-    --muted: #f7f6f4;
-    --muted-foreground: #666666;
+    --secondary: #f1f5f9;
+    --secondary-foreground: #0f172a;
+    --muted: #f8fafc;
+    --muted-foreground: #1e293b;
     --accent: #C89B2C;
     --accent-foreground: #ffffff;
-    --border: #E8E4DE;
+    --border: #cbd5e1;
     --ring: #C89B2C;
     
     --gold: #C89B2C;
@@ -82,32 +82,37 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
+    font-weight: 700;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    font-weight: 800;
+  }
+  p, span, li, a, button, label, input, textarea {
+    font-weight: 700;
   }
 }
 
 @layer utilities {
   /* ── Standard buttons (used everywhere except hero) ── */
   .btn-gold {
-    @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-11 px-8 py-2 gap-2;
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-11 px-8 py-2 gap-2;
   }
   :root .btn-gold, [data-theme="dark"] .btn-gold {
-    @apply bg-[#D4AF37] text-black shadow-lg hover:shadow-[0_4px_20px_rgba(212,175,55,0.4)] hover:-translate-y-0.5 hover:bg-[#E4BF45];
+    @apply bg-[#D4AF37] text-black font-extrabold shadow-lg hover:shadow-[0_4px_20px_rgba(212,175,55,0.4)] hover:-translate-y-0.5 hover:bg-[#E4BF45];
   }
   [data-theme="light"] .btn-gold {
-    @apply bg-[#C89B2C] text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-[#B6891F];
+    @apply bg-[#C89B2C] text-white font-extrabold shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-[#B6891F];
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-11 px-8 py-2;
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-11 px-8 py-2;
   }
   :root .btn-ghost, [data-theme="dark"] .btn-ghost {
-    @apply bg-transparent border border-white text-white hover:border-[#D4AF37] hover:text-[#D4AF37] hover:shadow-[0_0_15px_rgba(212,175,55,0.3)];
+    @apply bg-transparent border-2 border-white text-white font-extrabold hover:border-[#D4AF37] hover:text-[#D4AF37] hover:shadow-[0_0_15px_rgba(212,175,55,0.3)];
   }
   [data-theme="light"] .btn-ghost {
-    @apply bg-white border border-[#C89B2C] text-[#C89B2C] hover:bg-[#C89B2C] hover:text-white;
+    @apply bg-white border-2 border-[#C89B2C] text-[#C89B2C] font-extrabold hover:bg-[#C89B2C] hover:text-white;
   }
 
   /* ── Hero-specific CTA buttons (on dark background image) ── */
@@ -119,7 +124,7 @@
     height: 2.875rem;
     border-radius: 0.5rem;
     font-size: 0.875rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.01em;
     white-space: nowrap;
     cursor: pointer;
@@ -146,35 +151,36 @@
     height: 2.875rem;
     border-radius: 0.5rem;
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 0.01em;
     white-space: nowrap;
     cursor: pointer;
     text-decoration: none;
-    background: rgba(255,255,255,0.07);
-    color: rgba(255,255,255,0.92);
-    border: 1.5px solid rgba(255,255,255,0.28);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(0,0,0,0.4);
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, color 220ms ease;
   }
   .btn-hero-ghost:hover {
     transform: translateY(-1px);
-    background: rgba(255,255,255,0.14);
-    border-color: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.25);
+    border-color: #ffffff;
     color: #ffffff;
   }
   .btn-hero-ghost:active {
     transform: translateY(0);
   }
   .glass {
-    @apply bg-card/80 border border-border/50 backdrop-blur-xl;
+    @apply bg-card border border-border/80 backdrop-blur-xl;
   }
   .shadow-luxe {
     box-shadow: 0 15px 50px -12px rgba(0,0,0,0.4);
   }
   .eyebrow {
-    @apply text-xs font-bold uppercase tracking-[0.25em] text-gold;
+    @apply text-xs font-extrabold uppercase tracking-[0.25em] text-gold;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
   }
   .reveal {
     animation: reveal-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -207,8 +213,8 @@
   [data-theme="dark"] .hero-overlay,
   [data-theme="light"] .hero-overlay {
     background:
-      linear-gradient(105deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.15) 100%),
-      linear-gradient(to top, rgba(0,0,0,0.30) 0%, transparent 35%);
+      linear-gradient(105deg, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.25) 100%),
+      linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 40%);
   }
 
   /* ══════════════════════════════════════════════════════
@@ -216,11 +222,11 @@
      ══════════════════════════════════════════════════════ */
   .hero-text-panel {
     border-radius: 28px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    background: rgba(255, 255, 255, 0.16);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(0, 0, 0, 0.35);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.5);
     
     /* Animation */
     animation: hero-card-entrance 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -253,10 +259,10 @@
   [data-theme="dark"] .hero-heading,
   [data-theme="light"] .hero-heading {
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.01em;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.55), 0 1px 4px rgba(0,0,0,0.35);
+    text-shadow: 0 3px 18px rgba(0,0,0,0.7), 0 1px 6px rgba(0,0,0,0.5);
     -webkit-font-smoothing: antialiased;
     width: 100%;
     max-width: 100%;
@@ -273,12 +279,12 @@
   .hero-heading-eyebrow {
     display: block;
     font-family: var(--font-sans);
-    font-size: clamp(10px, 1.2vw, 13px);
-    font-weight: 700;
+    font-size: clamp(11px, 1.3vw, 14px);
+    font-weight: 800;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: #d4af37;
-    text-shadow: 0 1px 8px rgba(212,175,55,0.4);
+    color: #ffd700;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8), 0 0 12px rgba(212,175,55,0.5);
     margin-bottom: 0.5rem;
   }
 
@@ -286,20 +292,21 @@
   .hero-heading-main {
     display: block;
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.04;
     letter-spacing: -0.025em;
     color: #ffffff;
+    text-shadow: 0 3px 20px rgba(0,0,0,0.8);
   }
 
-  /* Hero heading accent word — Precision text styling (#FFFFFF matching layout seamlessly) */
+  /* Hero heading accent word */
   .hero-heading-accent {
     font-family: var(--font-display);
     font-style: normal;
-    font-weight: 800;
+    font-weight: 900;
     color: #ffffff;
     letter-spacing: -0.025em;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.55);
+    text-shadow: 0 3px 20px rgba(0,0,0,0.8);
     -webkit-text-fill-color: #ffffff;
   }
 
@@ -307,8 +314,9 @@
   :root .hero-body,
   [data-theme="dark"] .hero-body,
   [data-theme="light"] .hero-body {
-    color: rgba(255, 255, 255, 0.92);
-    text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.85);
     line-height: 1.75;
     max-width: 520px;
     -webkit-font-smoothing: antialiased;
@@ -319,6 +327,7 @@
      ════════════════════════════════════════════════════════ */
 
   .section-heading {
+    font-weight: 800;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: color 600ms ease, text-shadow 600ms ease;
@@ -327,41 +336,43 @@
   :root .section-heading,
   [data-theme="dark"] .section-heading {
     color: #ffffff;
-    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.55);
   }
 
   [data-theme="light"] .section-heading {
-    color: #111111;
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.25);
+    color: #0f172a;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   }
 
   .section-body {
+    font-weight: 700;
     -webkit-font-smoothing: antialiased;
     transition: color 600ms ease, text-shadow 600ms ease;
   }
 
   :root .section-body,
   [data-theme="dark"] .section-body {
-    color: rgba(255, 255, 255, 0.88);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   }
 
   [data-theme="light"] .section-body {
-    color: #374151;
-    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.30);
+    color: #1e293b;
+    text-shadow: none;
   }
 
   .section-caption {
+    font-weight: 700;
     transition: color 600ms ease;
   }
 
   :root .section-caption,
   [data-theme="dark"] .section-caption {
-    color: rgba(255, 255, 255, 0.72);
+    color: #f1f5f9;
   }
 
   [data-theme="light"] .section-caption {
-    color: #6B7280;
+    color: #334155;
   }
 
   /* ── Zoomable images ── */

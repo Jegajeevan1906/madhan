@@ -113,13 +113,6 @@ export function Home() {
         <div className="relative flex flex-col flex-1 mx-auto w-full max-w-7xl px-5 sm:px-8 pt-28 sm:pt-32 pb-6">
           <div className="flex-1 flex items-center py-6">
             <div className="hero-text-panel">
-              <img
-                src="/assets/logo-transparent.png"
-                alt="SEENI INFRA PVT LTD"
-                width={220} height={66}
-                className="h-14 sm:h-16 w-auto object-contain mb-6 sm:mb-8"
-                style={{ filter: "drop-shadow(0 3px 12px rgba(0,0,0,0.6)) drop-shadow(0 0 8px rgba(212,175,55,0.25))" }}
-              />
               <h1 className="hero-heading">
                 <span className="hero-heading-eyebrow">Building the Future</span>
                 <span className="hero-heading-main">
@@ -129,7 +122,7 @@ export function Home() {
                   Last.
                 </span>
               </h1>
-              <p className="hero-body mt-5 sm:mt-6 max-w-[46ch] text-sm sm:text-base leading-[1.75]">
+              <p className="hero-body mt-5 sm:mt-6 max-w-[46ch] text-sm sm:text-base leading-[1.75] font-bold">
                 India's premier construction company delivering Fortune&#8209;500‑grade
                 infrastructure, industrial, and commercial landmarks — with
                 uncompromising quality and enduring craftsmanship.
@@ -149,7 +142,7 @@ export function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.6, duration: 1 }}
-            className="pb-5 sm:pb-7 flex items-center gap-2.5 text-white/60 text-[10px] uppercase tracking-[0.3em] select-none"
+            className="pb-5 sm:pb-7 flex items-center gap-2.5 text-white font-bold text-[11px] uppercase tracking-[0.3em] select-none"
           >
             <ArrowDown className="h-3.5 w-3.5 animate-bounce text-gold flex-shrink-0" />
             Scroll to explore
@@ -180,10 +173,10 @@ export function Home() {
             </div>
             <div>
               <p className="eyebrow">Company Highlights</p>
-              <h2 className="section-heading mt-4 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">
+              <h2 className="section-heading mt-4 text-3xl font-extrabold leading-[1.1] sm:text-4xl md:text-5xl">
                 A legacy of strength,<br className="hidden sm:block" /> precision, and trust
               </h2>
-              <p className="section-body mt-6 text-base leading-relaxed max-w-xl">
+              <p className="section-body mt-6 text-base font-bold leading-relaxed max-w-xl">
                 Established on December 29, 2025, by Managing Director Anita Kumari Sam Vijaya Kumar,
                 SEENI INFRA PVT LTD unites industry-leading engineers, master builders, and architects.
                 We take a single-team approach to every commission, ensuring impeccable execution
@@ -198,8 +191,8 @@ export function Home() {
                 ].map((stat, i) => (
                   <motion.div key={i} variants={fadeUpVariant}
                     className="glass rounded-2xl p-6 sm:p-8 transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe">
-                    <p className="font-display text-3xl font-bold text-gold sm:text-4xl">{stat.value}</p>
-                    <p className="mt-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">{stat.label}</p>
+                    <p className="font-display text-3xl font-extrabold text-gold sm:text-4xl">{stat.value}</p>
+                    <p className="mt-3 text-xs uppercase tracking-[0.16em] font-bold text-foreground">{stat.label}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -221,8 +214,8 @@ export function Home() {
         >
           <div className="max-w-2xl text-center mx-auto">
             <p className="eyebrow">Capabilities</p>
-            <h2 className="section-heading mt-4 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">What we deliver</h2>
-            <p className="section-body mt-5 text-base leading-relaxed max-w-xl mx-auto">
+            <h2 className="section-heading mt-4 text-3xl font-extrabold leading-[1.1] sm:text-4xl md:text-5xl">What we deliver</h2>
+            <p className="section-body mt-5 text-base font-bold leading-relaxed max-w-xl mx-auto">
               Comprehensive engineering and construction services across all sectors, backed by precision and excellence.
             </p>
           </div>
@@ -314,18 +307,18 @@ export function Home() {
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-[1.08] rounded-3xl"
                 />
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/92 via-black/38 to-transparent" />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/95 via-black/45 to-transparent" />
                 <div className="relative z-10 p-7">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-gold text-black shadow-lg transition-transform duration-300 group-hover:scale-110">
+                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-gold text-black font-extrabold shadow-lg transition-transform duration-300 group-hover:scale-110">
                       <cap.icon className="h-5 w-5" />
                     </span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-black/60 text-gold border border-gold/30 backdrop-blur-md">
+                    <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full bg-black/80 text-gold border border-gold/50 backdrop-blur-md">
                       {cap.gallery.length} Photos
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-1.5">{cap.title}</h3>
-                  <p className="text-xs leading-relaxed text-gray-300/80 opacity-0 translate-y-3 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 line-clamp-2">
+                  <h3 className="text-xl font-extrabold text-white mb-1.5">{cap.title}</h3>
+                  <p className="text-xs font-bold leading-relaxed text-gray-100 opacity-90 translate-y-3 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 line-clamp-2">
                     {cap.desc}
                   </p>
                 </div>
@@ -346,7 +339,7 @@ export function Home() {
         >
           <div className="max-w-2xl text-center mx-auto">
             <p className="eyebrow">Why Choose Us</p>
-            <h2 className="section-heading mt-4 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">Built on five commitments</h2>
+            <h2 className="section-heading mt-4 text-3xl font-extrabold leading-[1.1] sm:text-4xl md:text-5xl">Built on five commitments</h2>
           </div>
           <motion.div variants={staggerContainer} className="mt-16 grid gap-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
             {[
@@ -366,13 +359,13 @@ export function Home() {
                 />
                 <div 
                   className="absolute inset-0 transition-opacity duration-500" 
-                  style={{ background: "linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65))" }} 
+                  style={{ background: "linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75))" }} 
                 />
                 <div className="relative z-10 flex flex-col items-center justify-center">
-                  <span className="grid h-14 w-14 place-items-center rounded-full border border-gold/30 bg-gold/20 text-gold mb-5 backdrop-blur-sm">
+                  <span className="grid h-14 w-14 place-items-center rounded-full border border-gold/40 bg-gold/30 text-gold mb-5 backdrop-blur-sm shadow-md">
                     <feature.icon className="h-6 w-6" />
                   </span>
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-white">{feature.label}</h3>
+                  <h3 className="text-sm font-extrabold uppercase tracking-wider text-white drop-shadow-md">{feature.label}</h3>
                 </div>
               </motion.div>
             ))}
@@ -391,8 +384,8 @@ export function Home() {
         >
           <div className="max-w-2xl text-center mx-auto">
             <p className="eyebrow">Accreditations</p>
-            <h2 className="section-heading mt-4 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">Recognized Excellence</h2>
-            <p className="section-body mt-5 text-base leading-relaxed mx-auto max-w-lg">
+            <h2 className="section-heading mt-4 text-3xl font-extrabold leading-[1.1] sm:text-4xl md:text-5xl">Recognized Excellence</h2>
+            <p className="section-body mt-5 text-base font-bold leading-relaxed mx-auto max-w-lg">
               Officially registered and certified with India's leading regulatory bodies.
             </p>
           </div>
@@ -410,12 +403,12 @@ export function Home() {
               <motion.div key={idx} variants={fadeUpVariant}
                 className="glass rounded-3xl p-8 transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-luxe">
                 <div className="flex items-center gap-5 mb-5">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-muted border border-border text-gold">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-muted border border-border text-gold font-bold">
                     <Award className="h-6 w-6" />
                   </span>
-                  <h3 className="text-lg font-bold tracking-wide">{cert.name}</h3>
+                  <h3 className="text-lg font-extrabold tracking-wide">{cert.name}</h3>
                 </div>
-                <p className="text-sm leading-relaxed section-caption">{cert.desc}</p>
+                <p className="text-sm font-bold leading-relaxed section-caption">{cert.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -445,23 +438,23 @@ export function Home() {
               style={{ top: "-7.5%" }}
             />
             {/* Layered overlay: black + rich gold tint at bottom for premium black & gold aesthetic */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/80" />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a0800]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a0800]/70 to-transparent" />
             {/* Gold decorative rule */}
             <div className="relative z-10 mx-auto max-w-3xl">
               <div className="flex items-center justify-center gap-4 mb-8">
-                <span className="h-px w-12 bg-gold/60" />
-                <span className="text-gold text-xs font-bold uppercase tracking-[0.3em]">SEENI INFRA PVT LTD</span>
-                <span className="h-px w-12 bg-gold/60" />
+                <span className="h-px w-12 bg-gold" />
+                <span className="text-gold text-xs font-extrabold uppercase tracking-[0.3em]">SEENI INFRA PVT LTD</span>
+                <span className="h-px w-12 bg-gold" />
               </div>
               <h2 className="text-3xl font-extrabold leading-[1.08] sm:text-5xl text-white tracking-tight">
                 Let's Build Your<br className="hidden sm:block" />{" "}Dream Project
               </h2>
-              <p className="mx-auto mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-gray-200/90">
+              <p className="mx-auto mt-6 max-w-xl text-base sm:text-lg font-bold leading-relaxed text-white">
                 Share your brief and our directors will respond within two working days to discuss your vision and bring it to life.
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <Link to="/contact" className="btn-gold text-base py-6 shadow-gold/40 hover:shadow-gold/60">
+                <Link to="/contact" className="btn-gold text-base py-6 font-extrabold shadow-gold/40 hover:shadow-gold/60">
                   Start a Conversation <ArrowUpRight className="h-5 w-5" />
                 </Link>
               </div>
