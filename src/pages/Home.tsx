@@ -21,7 +21,6 @@ import { useTheme } from "../components/ThemeContext"
 import {
   HERO_DAY,
   HERO_NIGHT,
-  buildSrcSet,
   INTERIOR,
   INFRA_1,
   INFRA_2,
@@ -60,12 +59,15 @@ const staggerContainer = {
   visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// MASTER IMAGE REGISTRY — HOME PAGE
+// Hero, interior and CTA use local /public/assets — see src/lib/images.ts
+// ─────────────────────────────────────────────────────────────────────────────
+
+
 export function Home() {
   const { theme } = useTheme()
   const isNight = theme === "dark"
-
-  const daySrcSet = buildSrcSet(HERO_DAY)
-  const nightSrcSet = buildSrcSet(HERO_NIGHT)
 
   return (
     <>
@@ -74,35 +76,39 @@ export function Home() {
       ══════════════════════════════════════════════════════════════════ */}
       <section className="relative isolate flex flex-col min-h-screen overflow-hidden">
 
-        {/* Night image — 4K Ultra HD */}
+        {/* Night image — local asset: hero-night.webp */}
         <img
           src={HERO_NIGHT}
-          {...(nightSrcSet ? { srcSet: nightSrcSet, sizes: "100vw" } : { sizes: "100vw" })}
+          sizes="100vw"
           alt="Luxury high-rise illuminated at night"
           fetchPriority="high"
           decoding="sync"
+          className="hero-banner-img"
           style={{
             position: "absolute", inset: 0, zIndex: -20,
             width: "100%", height: "100%", objectFit: "cover",
             objectPosition: "center 30%",
             opacity: isNight ? 1 : 0,
             transition: "opacity 700ms cubic-bezier(0.4,0,0.2,1)",
+            filter: "contrast(1.05) saturate(1.05) brightness(1.02)",
           }}
         />
 
-        {/* Day image — 4K Ultra HD */}
+        {/* Day image — local asset: hero-day.webp */}
         <img
           src={HERO_DAY}
-          {...(daySrcSet ? { srcSet: daySrcSet, sizes: "100vw" } : { sizes: "100vw" })}
+          sizes="100vw"
           alt="Premium construction site with cranes against blue sky"
           fetchPriority="high"
           decoding="sync"
+          className="hero-banner-img"
           style={{
             position: "absolute", inset: 0, zIndex: -20,
             width: "100%", height: "100%", objectFit: "cover",
             objectPosition: "center 40%",
             opacity: isNight ? 0 : 1,
             transition: "opacity 700ms cubic-bezier(0.4,0,0.2,1)",
+            filter: "contrast(1.05) saturate(1.05) brightness(1.02)",
           }}
         />
 

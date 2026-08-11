@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useTheme } from "./ThemeContext"
-import { buildSrcSet } from "../lib/images"
 
 interface PageHeroProps {
   /** Daytime image path (shown in light theme) */
@@ -22,6 +21,31 @@ interface PageHeroProps {
   objectPosition?: string
   /** Extra content rendered inside the glass panel (e.g. buttons) */
   children?: React.ReactNode
+}
+
+/**
+ * Builds an Unsplash srcSet only when the URL is an Unsplash CDN URL.
+ * Returns undefined for local assets so the browser uses the src directly.
+ */
+function buildSrcSet(src: string): string | undefined {
+  if (!src || !src.includes("unsplash.com")) return undefined
+  try {
+    const urlBase = src.split("?")[0]
+    const params = new URLSearchParams(src.split("?")[1] ?? "")
+    params.delete("w")
+    params.delete("q")
+    const paramsStr = params.toString()
+    const buildUrl = (w: number, q: number) =>
+      `${urlBase}?${paramsStr ? paramsStr + "&" : ""}w=${w}&q=${q}`
+    return [
+      `${buildUrl(640,  85)} 640w`,
+      `${buildUrl(1280, 88)} 1280w`,
+      `${buildUrl(1920, 92)} 1920w`,
+      `${buildUrl(3840, 95)} 3840w`,
+    ].join(", ")
+  } catch {
+    return undefined
+  }
 }
 
 export function PageHero({
@@ -76,12 +100,14 @@ export function PageHero({
         decoding="sync"
         aria-hidden="true"
         onError={() => setNightError(true)}
+        className="hero-banner-img"
         style={{
           position: "absolute", inset: 0, zIndex: -20,
           width: "100%", height: "100%", objectFit: "cover",
           objectPosition,
           opacity: isNight ? 1 : 0,
           transition: "opacity 700ms cubic-bezier(0.4, 0, 0.2, 1)",
+          filter: "contrast(1.05) saturate(1.05) brightness(1.02)",
         }}
       />
 
@@ -94,12 +120,14 @@ export function PageHero({
         decoding="sync"
         aria-hidden="true"
         onError={() => setDayError(true)}
+        className="hero-banner-img"
         style={{
           position: "absolute", inset: 0, zIndex: -20,
           width: "100%", height: "100%", objectFit: "cover",
           objectPosition,
           opacity: isNight ? 0 : 1,
           transition: "opacity 700ms cubic-bezier(0.4, 0, 0.2, 1)",
+          filter: "contrast(1.05) saturate(1.05) brightness(1.02)",
         }}
       />
 

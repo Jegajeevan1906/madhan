@@ -1,52 +1,33 @@
 /**
- * Utility function to build a 4K responsive srcSet for background images
+ * ─────────────────────────────────────────────────────────────────────────────
+ * CENTRALIZED IMAGE CONFIGURATION
+ * All local asset paths are defined here — one source of truth.
+ * No hardcoded image URLs should exist outside this file.
+ * ─────────────────────────────────────────────────────────────────────────────
  */
-export function buildSrcSet(src: string): string | undefined {
-  if (!src) return undefined
-  if (src.includes("unsplash.com")) {
-    try {
-      const urlBase = src.split("?")[0]
-      const params = new URLSearchParams(src.split("?")[1] ?? "")
-      params.delete("w")
-      params.delete("q")
-      const paramsStr = params.toString()
-      const buildUrl = (w: number, q: number) =>
-        `${urlBase}?${paramsStr ? paramsStr + "&" : ""}w=${w}&q=${q}`
-      return [
-        `${buildUrl(640,  85)} 640w`,
-        `${buildUrl(1280, 88)} 1280w`,
-        `${buildUrl(1920, 92)} 1920w`,
-        `${buildUrl(3840, 95)} 3840w`,
-      ].join(", ")
-    } catch {
-      return undefined
-    }
-  }
-  return undefined
-}
 
 // ── Logo ──────────────────────────────────────────────────────────────────────
 export const LOGO = "/assets/logo-transparent.png"
 
-// ── Hero (Home) — 4K Ultra HD ─────────────────────────────────────────────────
-export const HERO_DAY   = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=3840&q=95"
-export const HERO_NIGHT = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=3840&q=95"
+// ── Hero (Home) — theme-aware ─────────────────────────────────────────────────
+export const HERO_DAY   = "/assets/hero-day.png"
+export const HERO_NIGHT = "/assets/hero-night.png"
 
-// ── About — 4K Ultra HD ───────────────────────────────────────────────────────
-export const ABOUT_DAY   = "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=3840&q=95"
-export const ABOUT_NIGHT = "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=3840&q=95"
+// ── About — theme-aware ───────────────────────────────────────────────────────
+export const ABOUT_DAY   = "/assets/about-day.png"
+export const ABOUT_NIGHT = "/assets/about-night.png"
 
-// ── Services — 4K Ultra HD ─────────────────────────────────────────────────
-export const SERVICES_DAY   = "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=3840&q=95"
-export const SERVICES_NIGHT = "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=3840&q=95"
+// ── Services — HD glass corporate campus theme-aware ─────────────────────────
+export const SERVICES_DAY   = "/assets/services-banner-day.png"
+export const SERVICES_NIGHT = "/assets/services-banner-night.png"
 
-// ── Blog — 4K Ultra HD ───────────────────────────────────────────────────────
-export const BLOG_DAY   = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=3840&q=95"
-export const BLOG_NIGHT = "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=3840&q=95"
+// ── Blog — executive female MD leadership theme-aware ───────────────────────
+export const BLOG_DAY   = "/assets/female-md-banner-day.png"
+export const BLOG_NIGHT = "/assets/female-md-banner-night.png"
 
-// ── Contact — 4K Ultra HD ─────────────────────────────────────────────────────
-export const CONTACT_DAY   = "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=3840&q=95"
-export const CONTACT_NIGHT = "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=3840&q=95"
+// ── Contact — theme-aware ─────────────────────────────────────────────────────
+export const CONTACT_DAY   = "/assets/contact-banner-day.png"
+export const CONTACT_NIGHT = "/assets/contact-banner-night.png"
 
 // ── Projects ──────────────────────────────────────────────────────────────────
 export const PROJECT_1 = "/assets/project-1.jpg"
