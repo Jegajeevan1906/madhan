@@ -21,6 +21,7 @@ import { useTheme } from "../components/ThemeContext"
 import {
   HERO_DAY,
   HERO_NIGHT,
+  buildSrcSet,
   INTERIOR,
   INFRA_1,
   INFRA_2,
@@ -59,15 +60,12 @@ const staggerContainer = {
   visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// MASTER IMAGE REGISTRY — HOME PAGE
-// Hero, interior and CTA use local /public/assets — see src/lib/images.ts
-// ─────────────────────────────────────────────────────────────────────────────
-
-
 export function Home() {
   const { theme } = useTheme()
   const isNight = theme === "dark"
+
+  const daySrcSet = buildSrcSet(HERO_DAY)
+  const nightSrcSet = buildSrcSet(HERO_NIGHT)
 
   return (
     <>
@@ -76,10 +74,10 @@ export function Home() {
       ══════════════════════════════════════════════════════════════════ */}
       <section className="relative isolate flex flex-col min-h-screen overflow-hidden">
 
-        {/* Night image — local asset: hero-night.webp */}
+        {/* Night image — 4K Ultra HD */}
         <img
           src={HERO_NIGHT}
-          sizes="100vw"
+          {...(nightSrcSet ? { srcSet: nightSrcSet, sizes: "100vw" } : { sizes: "100vw" })}
           alt="Luxury high-rise illuminated at night"
           fetchPriority="high"
           decoding="sync"
@@ -92,10 +90,10 @@ export function Home() {
           }}
         />
 
-        {/* Day image — local asset: hero-day.webp */}
+        {/* Day image — 4K Ultra HD */}
         <img
           src={HERO_DAY}
-          sizes="100vw"
+          {...(daySrcSet ? { srcSet: daySrcSet, sizes: "100vw" } : { sizes: "100vw" })}
           alt="Premium construction site with cranes against blue sky"
           fetchPriority="high"
           decoding="sync"
